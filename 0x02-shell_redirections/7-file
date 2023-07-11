@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Best School" > '\*\x5C\x27Best School\x27\x5C\x2A\x24\x3F\x2A\x2A\x2A\x2A\x2A\x2A\x2A:)\n'
+echo "Best School" > \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
