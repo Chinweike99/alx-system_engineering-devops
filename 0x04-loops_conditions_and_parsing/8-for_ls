@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Bash script that displays the content of the current dir
+# in a list format
+
+# To get the list of files in the current dir
+files=$(ls)
+
+for file in $files; do
+        # Check if the file name contains a dash
+        if [[ $file == *-* ]]; then
+
+                # Extracts the parts after the first dash
+                part_after_dash=$(echo "$file" | cut -d'-' -f2-)
+                echo "$part_after_dash"
+        fi
+done
