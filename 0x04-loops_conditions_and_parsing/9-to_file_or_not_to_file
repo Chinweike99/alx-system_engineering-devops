@@ -2,7 +2,6 @@
 # Bash script that gives information about school file
 
 file_path="school"
-
 #check if the file exists
 if [ -e "$file_path" ]; then
         echo "school file exists"
