@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+# prints the message infinity and beyon for
+# eternity unless it is killed, not so ethernal after all
 
-#while [[ $count -le 10 ]]; do
-while true; do
+while true;
+do
         echo "To infinity and beyond"
         sleep 2
 done
