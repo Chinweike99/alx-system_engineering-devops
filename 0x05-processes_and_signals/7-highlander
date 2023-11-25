@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Function to display the termination message
+termination_message() {
+    echo "I am invincible!!!"
+    exit
+}
+
+# Trap SIGTERM to call the termination_message function
+trap termination_message SIGTERM
+
+# Loop indefinitely with a sleep of 2 seconds between each iteration
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+    echo "To infinity and beyond"
+    sleep 2
+    echo "I am invincible!!!"
+    sleep 2
+done

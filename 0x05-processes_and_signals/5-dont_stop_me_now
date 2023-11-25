@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Function to display the termination message
+termination_message() {
+    echo "Terminated"
+    exit
+}
+
+# Set the number of iterations
+
+# Trap Ctrl+C to call the termination_message function
+trap termination_message INT
+
+# Loop indefinitely
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done

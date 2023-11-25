@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+printf "%-20s %-8s %-8s %-8s %-10s %-10s %-8s %-6s %-8s %-8s %-s\n" "USER" "PID" "%CPU" "%MEM" "VSZ" "RSS" "TTY" "STAT" "START" "TIME" "COMMAND"
+
+#ps -e -o pid,user,args --forest | while read -r line; do
+ps aux | while read -r line; do
+        user=$(echo "$line" | awk '{print $1}')
+        pid=$(echo "$line" | awk '{print $2}')
+        cpu=$(echo "$line" | awk '{print $3}')
+        mem=$(echo "$line" | awk '{print $4}')
+        vsz=$(echo "$line" | awk '{print $5}')
+        rss=$(echo "$line" | awk '{print $6}')
+        tty=$(echo "$line" | awk '{print $7}')
+        stat=$(echo "$line" | awk '{print $8}')
+        start=$(echo "$line" | awk '{print $9}')
+        time=$(echo "$line" | awk '{print $10}')
+        command=$(echo "$line" | awk '{for(i=11;i<=NF;++i) printf "%s ",$i; printf "\n"}')
+
+        printf "%-20s %-8s %-8s %-8s %-10s %-10s %-8s %-6s %-8s %-8s %-s\n" "$user" "$pid" "$cpu" "$mem" "$vsz" "$rss" "$tty" "$stat" "$start" "$time" "$command"
+
+
+
+done #<<(ps -e -o pid,user,args --forest)
