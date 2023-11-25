@@ -1,18 +1,11 @@
 #!/usr/bin/env bash
+# Bash script that stops 4-to_infinity_and_beyond process.
 
-# Function to display the termination message
-termination_message() {
-    echo "Terminated"
-    exit
-}
+# Get the pid of the program
+id=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
 
-# Set the number of iterations
-
-# Trap Ctrl+C to call the termination_message function
-trap termination_message INT
-
-# Loop indefinitely
-while true; do
-    echo "To infinity and beyond"
-    sleep 2
-done
+# Terminate the infinite loop
+if [ -n "$id" ]
+then
+	kill -15 "$id"
+fi
