@@ -16,19 +16,24 @@ and communication between different systems by providing a clear and organized s
  The OSI model is organized hierarchically, with each layer building upon the services provided by the layers below it. Data is encapsulated at each layer as it travels down the stack and decapsulated as it moves up. This modular organization allows for easy understanding and troubleshooting of network-related issues. Each layer communicates with the adjacent layers through well-defined interfaces.
 
 **More concept Learnt on Networking**
+
 _What is a LAN_
  - Typical usage
  - Typical geographical size
-__What is a WAN__
+
+_What is a WAN_
  - Typical usage
  - Typical geographical size
-__What is the Internet__
+
+_What is the Internet_
  - What is an IP address
  - What are the 2 types of IP address
-__What is localhost__
+
+_What is localhost_
  - What is a subnet
  - Why IPv6 was created
-__TCP/UDP__
+
+_TCP/UDP_
  -What are the 2 mainly used data transfer protocols for IP (transfer level on the OSI schema)
  - What is the main difference between TCP and UDP
  - What is a port
