@@ -16,7 +16,7 @@ and communication between different systems by providing a clear and organized s
  The OSI model is organized hierarchically, with each layer building upon the services provided by the layers below it. Data is encapsulated at each layer as it travels down the stack and decapsulated as it moves up. This modular organization allows for easy understanding and troubleshooting of network-related issues. Each layer communicates with the adjacent layers through well-defined interfaces.
 
 **More concept Learnt on Networking**
-__What is a LAN__
+_What is a LAN_
  - Typical usage
  - Typical geographical size
 __What is a WAN__
