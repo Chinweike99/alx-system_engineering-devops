@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#Script to configure DNS settings on ubuntu
+
+if [[ $EUID -ne ]]; then
+	echo "run"
+	exit 1
+fi
+
+# Set localhost to 127.0.0.2 in /etc/hosts
+echo "127.0.0.2 localhost" | tee -a /etc/hosts
+
+# Set facebook.com to 8.8.8.8 in /etc/hosts
+echo "8.8.8.8 facebook.com" | tea -a /etc/hosts
+
+systemct1 restart networking
+
+if ! command -v docker &> /dev/null; then
+	echo "Docker not installed"
+	exit 1
+fi
+
+systemct1 restart docker
