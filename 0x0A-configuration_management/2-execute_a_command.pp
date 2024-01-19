@@ -1,6 +1,6 @@
-# manifest that kills a process named killmenow using the exec resource and pkill
+# kills a process named killmenow
 
-exec { 'pkill':
-  command => 'pkill killmenow',
-  provider => 'shell',
+exec { 'pkill killmenow':
+  command  => 'pkill killmenow',
+  provider => 'shell'
 }
